@@ -1,0 +1,20 @@
+<main>
+    <h1>Movie List Component</h1>
+    <!-- <h2>{{welcome}}</h2> -->
+    <!-- <button (click)="changeParent()">cambia</button> -->
+    <div class="container">
+      <div class="row">
+        <div  *ngFor='let movie of movielist; let i= index;' class="card m-3 p-2" style="width: 18rem;">
+          <img [src]="movie.image" class="card-img-top" style="max-width: 90%;" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{movie.title}}</h5>
+            <p class="card-text">{{movie.plot}}</p>
+            <a href="#" class="btn btn-primary" (click) = "viewDetail(movie.id)">VIEW DETAILS</a>
+            <button class="btn btn-primary" (click)="editdetail(movie.id)">EDIT MOVIE</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  

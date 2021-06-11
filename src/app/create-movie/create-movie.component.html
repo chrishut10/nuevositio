@@ -1,0 +1,27 @@
+<h1>Add Movie</h1>
+<form name="createform" novalidate id="createform" #createform="ngForm" (ngSubmit)= "create()">
+    <div class="row">
+        <div class="col-4">
+            <label for="title">Name:</label>
+            <input type="text" id="title" #title="ngModel" class="form-control" name="title" [(ngModel)] = "newmovie.title" required >
+            <div class="alert alert-danger" [hidden] = "title.valid">INSERT TITLE</div>
+
+            <label for="title">Plot:</label>
+            <input type="text" id="plot" #plot="ngModel" class="form-control" name="plot" [(ngModel)] = "newmovie.plot" required >
+            <div class="alert alert-danger" [hidden] = "plot.valid">INSERT PLOT</div>
+
+            <label for="title">Cast:</label>
+            <input type="text" id="cast" #cast="ngModel" class="form-control" name="cast" [(ngModel)] = "newmovie.cast" required >
+            <div class="alert alert-danger" [hidden] = "cast.valid">INSERT CAST</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 mt-3">
+            <button type="submit" class="btn btn-success" [disabled]= "createform.invalid" >SAVE</button>
+        </div>
+    </div>
+</form>
+
+
+
